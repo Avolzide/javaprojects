@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects/AverageCalculatorBug/AverageCalculatorBug.iml" filepath="$PROJECT_DIR$/IdeaProjects/AverageCalculatorBug/AverageCalculatorBug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects/Car/Car.iml" filepath="$PROJECT_DIR$/IdeaProjects/Car/Car.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects/Debugger/Debugger.iml" filepath="$PROJECT_DIR$/IdeaProjects/Debugger/Debugger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects/House/House.iml" filepath="$PROJECT_DIR$/IdeaProjects/House/House.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects/Module1Lab1/Module1Lab1.iml" filepath="$PROJECT_DIR$/IdeaProjects/Module1Lab1/Module1Lab1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects/Sport/Sport.iml" filepath="$PROJECT_DIR$/IdeaProjects/Sport/Sport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/javaprojects.iml" filepath="$PROJECT_DIR$/.idea/javaprojects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects/test/test.iml" filepath="$PROJECT_DIR$/IdeaProjects/test/test.iml" />
+    </modules>
+  </component>
+</project>
