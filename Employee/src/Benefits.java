@@ -52,9 +52,9 @@ public class Benefits{
 
     @Override
     public String toString(){
-        String str = "\nCost: " + currencyFormat.format(getCost()) +
-                     "\nType: " + getType() +
-                     "\nProvider: " + getProvider();
+        String str = "\nType: " + getType() +
+                     "\nProvider: " + getProvider() +
+                     "\nCost: " + currencyFormat.format(getCost());
         return str;
     }
 }

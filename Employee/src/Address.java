@@ -60,10 +60,10 @@ public class Address {
 
     //Prints Address Information
     public String toString() {
-        String str = "\nCity: " + getCity() +
-                     "\nStreet: " + getStreet() +
-                     "\nState: " + getState() +
-                     "\nZip: " + getZip();
+        String str = getStreet() + "\n" +
+                     getCity()   + ", " +
+                     getState()  + ", " +
+                     getZip();
         return str;
     }
 }

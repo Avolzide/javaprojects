@@ -11,10 +11,10 @@ public class Driver {
 
         //Instantiating Benefits and Address and hardcoding info
         Benefits benefits = new Benefits("Health", 230, "Bloo X");
-        Address address = new Address("San Antonio", "Hunted Land", "Texas", "78222");
+        Address address = new Address("San Antonio", "110 Hunted Land", "Texas", "78222");
 
         //User input prompt for user ID, first name and last name
-        System.out.println("Enter a user ID: ");
+        System.out.println("Enter your user ID: ");
         userID = scan.nextLine();
         System.out.println("Enter your first name: ");
         fName = scan.nextLine();

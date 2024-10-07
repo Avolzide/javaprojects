@@ -84,11 +84,12 @@ public class Employee {
     }
     //Prints out employee info string
     public String printEmployeeInformation(){
-        String str = "\nEmployee Address: " + employeeAddress+
-                     "\nFirst Name: " + firstName +
-                     "\nLast Name: " + lastName +
-                     "\nEmployee ID: " + employeeID +
-                     "\nEmployee Benefits: " + employeeBenefits;
+        String str = "\n***** Employee Information ******" +
+                     "\n# Employee Details #" +
+                     "\n" + firstName + " " + lastName + " (" + employeeID + ")" +
+                     "\n" + employeeAddress +
+                     "\n# Employee Benefits #" +
+                      employeeBenefits;
         return str;
     }
 }
