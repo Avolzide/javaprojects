@@ -26,11 +26,71 @@ Module 3 - Lab 1
 -----------------------------------------------------------------------------------------------------
  */
 public class Employee {
-    String employeeID;
-    String firstName;
-    String lastName;
+    //List out variables
+    private String employeeID;
+    private Benefits employeeBenefits;
+    private String firstName;
+    private Address employeeAddress;
+    private String lastName;
 
+    //Parameterized constructor
+    public Employee(String employeeID, Benefits employeeBenefits, String firstName, Address employeeAddress, String lastName){
+        this.employeeID = employeeID;
+        this.employeeBenefits = employeeBenefits;
+        this.firstName = firstName;
+        this.employeeAddress = employeeAddress;
+        this.lastName = lastName;
+    }
 
+    //Getters and Setters
+    public String getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public Benefits getEmployeeBenefits() {
+        return employeeBenefits;
+    }
+
+    public void setEmployeeBenefits(Benefits employeeBenefits) {
+        this.employeeBenefits = employeeBenefits;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Address getEmployeeAddress() {
+        return employeeAddress;
+    }
+
+    public void setEmployeeAddress(Address employeeAddress) {
+        this.employeeAddress = employeeAddress;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    //Prints out employee info string
+    public String printEmployeeInformation(){
+        String str = "\nEmployee Address: " + employeeAddress+
+                     "\nFirst Name: " + firstName +
+                     "\nLast Name: " + lastName +
+                     "\nEmployee ID: " + employeeID +
+                     "\nEmployee Benefits: " + employeeBenefits;
+        return str;
+    }
 }
 
 
