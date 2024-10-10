@@ -1,12 +1,14 @@
+import java.util.Random;
+
 public class ParkingPermit {
     private int permitID;
     private String carMake;
     private String carModel;
     private String carYear;
 
+    Random rand = new Random();
     //Parameterized Constructor
-    public ParkingPermit(int pPermitID, String pCarMake, String pCarModel, String pCarYear){
-        this.permitID = pPermitID;
+    public ParkingPermit(String pCarMake, String pCarModel, String pCarYear){
         this.carMake = pCarMake;
         this.carModel = pCarModel;
         this.carYear = pCarYear;
@@ -28,7 +30,8 @@ public class ParkingPermit {
     }
     //Getters and setters
     public int getPermitID() {
-        return permitID;
+
+    return rand.nextInt(1000, 9999);
     }
 
     public String getCarMake() {
@@ -39,9 +42,7 @@ public class ParkingPermit {
         this.carMake = carMake;
     }
 
-    public String getCarModel() {
-        return carModel;
-    }
+    public String getCarModel() { return carModel; }
 
     public void setCarModel(String carModel) {
         this.carModel = carModel;
