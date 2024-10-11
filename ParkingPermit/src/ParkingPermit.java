@@ -5,6 +5,7 @@ public class ParkingPermit {
     private String carMake;
     private String carModel;
     private String carYear;
+    private ParkingPermit parkingPermit;
 
     Random rand = new Random();
     //Parameterized Constructor
@@ -54,5 +55,14 @@ public class ParkingPermit {
 
     public void setCarYear(String carYear) {
         this.carYear = carYear;
+    }
+
+    public String printPermit() {
+        String str = "\n***Permit Details***\n" +
+                     "Car Make: " + getCarMake() + "\n" +
+                     "Car Model: " + getCarModel() + "\n" +
+                     "Car Year: " + getCarYear() + "\n" +
+                     "Permit ID: " + getPermitID() + "\n";
+        return str;
     }
 }

@@ -11,6 +11,12 @@ public class Student {
         this.address = pAddress;
         this.parkingPermit = pParkingPermit;
     }
+    public Student(Student nStudent){
+        this.firstName = nStudent.firstName;
+        this.lastName = nStudent.lastName;
+        this.address = nStudent.address;
+        this.parkingPermit = nStudent.parkingPermit;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -44,7 +50,7 @@ public class Student {
         this.parkingPermit = parkingPermit;
     }
     public String printStudentInfo() {
-        String str = firstName + " " + lastName;
+        String str = "***Student Details***\n" + firstName + " " + lastName;
         return str;
     }
 }

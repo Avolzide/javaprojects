@@ -3,6 +3,7 @@ public class Address {
     private String street;
     private String state;
     private String zip;
+    private Address address;
 
     //Parameterized contructors
     public Address(String street, String city, String state, String zip) {
@@ -63,7 +64,7 @@ public class Address {
         String str = getStreet() + "\n" +
                      getCity()   + ", " +
                      getState()  + ", " +
-                     getZip();
+                     getZip() + "\n";
         return str;
     }
 }

@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public class ppDriver {
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-
 
         Header.displayHeader();
         System.out.println("Enter your first name: ");
@@ -37,7 +35,8 @@ public class ppDriver {
         ParkingPermit parkingPermit = new ParkingPermit(cMake, cModel, cYear);
         Address address = new Address(street, city, state, zip);
         Student student = new Student(fName, lName, address, parkingPermit);
+        Address addressTwo = new Address(address);
 
-        System.out.println(student.printStudentInfo() + "\n" + address.printAddress());
+        System.out.println(student.printStudentInfo() + "\n" + address.printAddress() + " " + parkingPermit.printPermit());
     }
 }
