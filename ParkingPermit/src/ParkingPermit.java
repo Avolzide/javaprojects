@@ -1,15 +1,17 @@
 import java.util.Random;
 
 public class ParkingPermit {
-    private int permitID;
+    //Variables
+    private final int permitID;
     private String carMake;
     private String carModel;
     private String carYear;
     private ParkingPermit parkingPermit;
 
-    Random rand = new Random();
+
     //Parameterized Constructor
     public ParkingPermit(String pCarMake, String pCarModel, String pCarYear){
+        this.permitID = genRandPermitID();
         this.carMake = pCarMake;
         this.carModel = pCarModel;
         this.carYear = pCarYear;
@@ -24,16 +26,18 @@ public class ParkingPermit {
     }
     //Copy constructor
     public ParkingPermit(ParkingPermit copy){
-        this.permitID = copy.permitID;
+        this.permitID = copy.getPermitID();
         this.carMake = copy.carMake;
         this.carModel = copy.carModel;
         this.carYear = copy.carYear;
     }
-    //Getters and setters
-    public int getPermitID() {
 
-    return rand.nextInt(1000, 9999);
+    private int genRandPermitID(){
+        Random rand = new Random();
+        return rand.nextInt(9000) + 1000;
     }
+    //Getters and setters
+    public int getPermitID() { return permitID; }
 
     public String getCarMake() {
         return carMake;
@@ -57,6 +61,7 @@ public class ParkingPermit {
         this.carYear = carYear;
     }
 
+    //Prints car info and parking permit
     public String printPermit() {
         String str = "\n***Permit Details***\n" +
                      "Car Make: " + getCarMake() + "\n" +

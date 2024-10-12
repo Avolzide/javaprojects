@@ -1,4 +1,5 @@
 public class Student {
+    //Variables
     private String firstName;
     private String lastName;
     private Address address;
@@ -11,13 +12,8 @@ public class Student {
         this.address = pAddress;
         this.parkingPermit = pParkingPermit;
     }
-    public Student(Student nStudent){
-        this.firstName = nStudent.firstName;
-        this.lastName = nStudent.lastName;
-        this.address = nStudent.address;
-        this.parkingPermit = nStudent.parkingPermit;
-    }
 
+    //Getters and setters
     public String getFirstName() {
         return firstName;
     }
@@ -49,6 +45,8 @@ public class Student {
     public void setParkingPermit(ParkingPermit parkingPermit) {
         this.parkingPermit = parkingPermit;
     }
+
+    //Print student class with details
     public String printStudentInfo() {
         String str = "***Student Details***\n" + firstName + " " + lastName;
         return str;
