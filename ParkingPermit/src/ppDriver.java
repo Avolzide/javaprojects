@@ -4,6 +4,7 @@ public class ppDriver {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
+        //Asking user to input info
         Header.displayHeader();
         System.out.println("Enter your first name: ");
         String fName = scan.nextLine();
@@ -32,11 +33,18 @@ public class ppDriver {
         System.out.println("Enter your car year: ");
         String cYear = scan.nextLine();
 
+        //Instantiating objects
         ParkingPermit parkingPermit = new ParkingPermit(cMake, cModel, cYear);
         Address address = new Address(street, city, state, zip);
         Student student = new Student(fName, lName, address, parkingPermit);
-        Address addressTwo = new Address(address);
+        Address addressCopy = new Address(address);
+        ParkingPermit parkingPermitCopy = new ParkingPermit(parkingPermit);
 
-        System.out.println(student.printStudentInfo() + "\n" + address.printAddress() + " " + parkingPermit.printPermit());
+        //Prints out Strings from print methods to read from top to bottom
+        System.out.println("\n" + student.printStudentInfo() + "\n" + address.printAddress() + " " + parkingPermit.printPermit());
+
+        //sout for testing the address and permit copy constructor
+//        System.out.println("~~~~Copy of Address~~~~\n" + addressCopy.printAddress());
+//        System.out.println("~~~~Copy of Parking Permit~~~~\n" + parkingPermitCopy.printPermit());
     }
 }

@@ -13,11 +13,11 @@ public class Address {
         this.zip = zip;
     }
     //Copy constructor
-    public Address(Address otherAddress){
-        this.city = otherAddress.city;
-        this.street = otherAddress.street;
-        this.state = otherAddress.state;
-        this.zip = otherAddress.zip;
+    public Address(Address addressCopy){
+        this.city = addressCopy.city;
+        this.street = addressCopy.street;
+        this.state = addressCopy.state;
+        this.zip = addressCopy.zip;
     }
     //Default constructor
     public Address() {
