@@ -1,24 +1,24 @@
-public class Character {
+public class TaganistCharacter {
 
     private String characterName;
     private String characterType;
     private int hitPoints;
 
     //Parameterized constructor
-    public Character(String cName, String cType, int hPoints){
+    public TaganistCharacter(String cName, String cType, int hPoints){
 
         this.characterName = cName;
         this.characterType = cType;
         this.hitPoints = hPoints;
     }
     //Default constructor
-    public Character(){
-        this.characterName = "";
-        this.characterType = "";
+    public TaganistCharacter(){
+        this.characterName = " ";
+        this.characterType = " ";
         this.hitPoints = 0;
     }
     //Copy constructor
-    public Character(Character newCharacter){
+    public TaganistCharacter(TaganistCharacter newCharacter){
         this.characterName = newCharacter.characterName;
         this.characterType = newCharacter.characterType;
         this.hitPoints = newCharacter.hitPoints;
@@ -46,5 +46,12 @@ public class Character {
 
     public void setHitPoints(int hitPoints) {
         this.hitPoints = hitPoints;
+    }
+
+    public String printCharacter(){
+        String str = "\nName: " + characterName + "\n" +
+                     "Type: " + characterType + "\n" +
+                     "Hit Points: " + hitPoints + "\n";
+        return str;
     }
 }

@@ -1,19 +1,22 @@
 public class VideoGame {
     private String gameName;
     private String genre;
-    private Character mainCharacter;
+    private TaganistCharacter mainCharacter;
 
     //Parameterized constructor
-    public VideoGame(String gName, String gGenre, Character gCharacter){
+    public VideoGame(String gName, String gGenre){
         this.gameName = gName;
         this.genre = gGenre;
-        this.mainCharacter = new Character(gCharacter);
     }
     //Default constructor
     public VideoGame(){
         this.gameName = "Generic";
         this.genre = "Unknown";
-        this.mainCharacter = new Character();
+    }
+    //Copy constructor
+    public VideoGame(VideoGame copyVGame){
+        this.gameName = copyVGame.gameName;
+        this.genre = copyVGame.genre;
     }
 
     public String getGameName() {
@@ -32,11 +35,9 @@ public class VideoGame {
         this.genre = genre;
     }
 
-    public Character getMainCharacter() {
-        return mainCharacter;
-    }
-
-    public void setMainCharacter(Character mainCharacter) {
-        this.mainCharacter = mainCharacter;
+    public String printVideoGame(){
+        String str = "\nGame Name: " + gameName + "\n" +
+                     "Game Genre: " + genre + "\n";
+        return str;
     }
 }
