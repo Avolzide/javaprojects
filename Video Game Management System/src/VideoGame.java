@@ -64,5 +64,60 @@ Please show your test of each function in your output
  */
 
 public class VideoGame{
-    private String gameTitle;
+
+    //Variables
+    private String videoGameTitle;
+    private String videoGameGenre;
+    private String videoGamePlatform;
+    private double videoGamePrice;
+
+    //Parameterized constructor
+    public VideoGame(String videoGameTitle, String videoGameGenre, String videoGamePlatform, double videoGamePrice){
+        this.videoGameTitle = videoGameTitle;
+        this.videoGameGenre = videoGameGenre;
+        this.videoGamePlatform = videoGamePlatform;
+        this.videoGamePrice = videoGamePrice;
+    }
+
+    //Default constructor
+    public VideoGame(){
+        this.videoGameTitle = "Supersonic Acrobatic Rocket-powered Battle-cars";
+        this.videoGameGenre = "Sports";
+        this.videoGamePlatform = "Playstation 3";
+        this.videoGamePrice = 19.99;
+    }
+
+    //Getters and setters
+    public String getVideoGameTitle() {
+        return videoGameTitle;
+    }
+
+    public void setVideoGameTitle(String videoGameTitle) {
+        this.videoGameTitle = videoGameTitle;
+    }
+
+    public String getVideoGameGenre() {
+        return videoGameGenre;
+    }
+
+    public void setVideoGameGenre(String videoGameGenre) {
+        this.videoGameGenre = videoGameGenre;
+    }
+
+    public String getVideoGamePlatform() {
+        return videoGamePlatform;
+    }
+
+    public void setVideoGamePlatform(String videoGamePlatform) {
+        this.videoGamePlatform = videoGamePlatform;
+    }
+
+    public double getVideoGamePrice() {
+        return videoGamePrice;
+    }
+
+    public void setVideoGamePrice(double videoGamePrice) {
+        this.videoGamePrice = videoGamePrice;
+    }
+
 }
