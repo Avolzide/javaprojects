@@ -33,50 +33,58 @@ Write your main program:
 
  4.2. Instantiate the Character, VideoGame, and GameStudio classes with the information provided by the user.
 
- 4.3. Finally, output the information about the game studio, the published video game, and the main character in a clear and engaging format.*/
+ 4.3. Finally, output the information about the game studio, the published video game, and the main character in a clear and engaging format.
+ */
 
-
-public class VideoGame {
-    private String gameName;
-    private String genre;
-    private Character mainCharacter;
+public class GameStudio {
+    private String studioName;
+    private String location;
+    private VideoGame publishedGame;
 
     //Parameterized constructor
-    public VideoGame(String name, String genre){
-        this.gameName = name;
-        this.genre = genre;
+    public GameStudio(String studioName, String location){
+        this.studioName = studioName;
+        this.location = location;
     }
     //Default constructor
-    public VideoGame(){
-        this.gameName = "Generic";
-        this.genre = "Unknown";
+    public GameStudio(){
+        this.studioName = " ";
+        this.location = " ";
     }
+
     //Copy constructor
-    public VideoGame(VideoGame copyVGame){
-        this.gameName = copyVGame.gameName;
-        this.genre = copyVGame.genre;
+    public GameStudio(GameStudio copyGameStudio){
+        this.studioName = copyGameStudio.studioName;
+        this.location = copyGameStudio.location;
     }
 
-    public String getGameName() {
-        return gameName;
+    public String getStudioName() {
+        return studioName;
     }
 
-    public void setGameName(String gameName) {
-        this.gameName = gameName;
+    public void setStudioName(String studioName) {
+        this.studioName = studioName;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getLocation() {
+        return location;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    //Printout
-    public String printVideoGame(){
-        String str = "\nGame Name: " + gameName + "\n" +
-                     "Game Genre: " + genre + "\n";
+    public VideoGame getPublishedGame() {
+        return publishedGame;
+    }
+
+    public void setPublishedGame(VideoGame publishedGame) {
+        this.publishedGame = publishedGame;
+    }
+
+    public String printStudio(){
+        String str = "\nStudio Name: " + studioName +
+                     "\nLocation: " + location;
         return str;
     }
 }
