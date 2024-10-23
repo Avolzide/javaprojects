@@ -68,9 +68,11 @@ When the user selects option 4, the program will gracefully exit, ending the loo
  */
 
 public class Contacts {
-    String[] firstName = {"Y'shtola", "Thancred", "Alisaie", "Lyse", "G'raha"};
-    String[] lastName = {"Rhul", "Waters", "Leveilleur","Hext", "Tia"};
-    String[] email = {"yshtola.rhul@baldesion.com", "thancred.waters@baldesion.com", "alisaie.leveilleur@baldesion.com",
-                      "lyse.hext@baldesion.com", "graha.tia@baldesion.com"};
-    String[] phoneNum = {"2103320864","2108827635", "2106359922", "2106182234", "2103648888"};
+
+    public void printContacts(){
+        String str = "\nFirst Name: " + firstName[1] +
+                     "\nLast Name: " +
+                     "\nEmail: " +
+                     "\nPhone Number: ";
+    }
 }
