@@ -119,5 +119,13 @@ public class VideoGame{
     public void setVideoGamePrice(double videoGamePrice) {
         this.videoGamePrice = videoGamePrice;
     }
-
+    public String printVideoGameInfo(){
+        String str = "***** Video Game Information *****" +
+                     "\nTitle    ==>     " + getVideoGameTitle() +
+                     "\nGenre    ==>     " + getVideoGameGenre() +
+                     "\nPlatform ==>     " + getVideoGamePlatform() +
+                     "\nPrice    ==>     " + getVideoGamePrice() +
+                     "\n**********************************\n";
+        return str;
+    }
 }
