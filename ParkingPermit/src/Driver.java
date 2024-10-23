@@ -37,73 +37,54 @@ Write your main program:
  4.4. Finally, output the student's information and parking permit details in a creative format. */
 
 
-public class Address {
-    private String city;
-    private String street;
-    private String state;
-    private String zip;
-    private Address address;
+import java.util.Scanner;
 
-    //Parameterized constructors
-    public Address(String street, String city, String state, String zip) {
-        this.street = street;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-    }
-    //Copy constructor
-    public Address(Address addressCopy){
-        this.city = addressCopy.city;
-        this.street = addressCopy.street;
-        this.state = addressCopy.state;
-        this.zip = addressCopy.zip;
-    }
-    //Default constructor
-    public Address() {
-        this.city = "Atreia";
-        this.street = "Balamatria";
-        this.state = "Kahrun";
-        this.zip = "78230";
-    }
-    //Getter and Setters
-    public String getCity() {
-        return city;
-    }
+public class Driver {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+        //Asking user to input info
+        Header.displayHeader();
+        System.out.println("Enter your first name: ");
+        String fName = scan.nextLine();
 
-    public String getStreet() {
-        return street;
-    }
+        System.out.println("Enter your last name: ");
+        String lName = scan.nextLine();
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
+        System.out.println("Street: ");
+        String street = scan.nextLine();
 
-    public String getState() {
-        return state;
-    }
+        System.out.println("City: ");
+        String city = scan.nextLine();
 
-    public void setState(String state) {
-        this.state = state;
-    }
+        System.out.println("State: ");
+        String state = scan.nextLine();
 
-    public String getZip() {
-        return zip;
-    }
+        System.out.println("Zip code: ");
+        String zip = scan.nextLine();
 
-    public void setZip(String zip) {
-        this.zip = zip;
-    }
+        System.out.println("Enter your car make: ");
+        String make = scan.nextLine();
 
-    //Prints Address Information
-    public String printAddress() {
-        String str = getStreet() + "\n" +
-                     getCity()   + ", " +
-                     getState()  + ", " +
-                     getZip() + "\n";
-        return str;
+        System.out.println("Enter your car model: ");
+        String model = scan.nextLine();
+
+        System.out.println("Enter your car year: ");
+        String year = scan.nextLine();
+
+        //Instantiating objects
+        ParkingPermit parkingPermit = new ParkingPermit(make, model, year, new ParkingPermit());
+        Address address = new Address(street, city, state, zip);
+        Student student = new Student(fName, lName, address, parkingPermit);
+
+        //Copy
+        Address addressCopy = new Address(address);
+        ParkingPermit parkingPermitCopy = new ParkingPermit(parkingPermit);
+
+        //Output
+        System.out.println("\n" + student.printStudentInfo() + "\n" + address.printAddress() + " " + parkingPermit.printPermit());
+
+//        System.out.println("~~~~Copy of Address~~~~\n" + addressCopy.printAddress());
+//        System.out.println("~~~~Copy of Parking Permit~~~~\n" + parkingPermitCopy.printPermit());
     }
 }

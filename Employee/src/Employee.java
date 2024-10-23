@@ -1,7 +1,7 @@
 /*
 David Cortinez
-10/02/2024
 Module 3 - Lab 1
+Purpose: To create an address, benefits, and employee classes and use copy constructors; aggregation
 */
 
 /*
@@ -87,9 +87,8 @@ public class Employee {
         String str = "\n***** Employee Information ******" +
                      "\n# Employee Details #" +
                      "\n" + firstName + " " + lastName + " (" + employeeID + ")" +
-                     "\n" + employeeAddress +
-                     "\n# Employee Benefits #" +
-                      employeeBenefits;
+                     "\n" + employeeAddress.printAddress() + "\n" +
+                     "\n# Employee Benefits #" + employeeBenefits.printBenefits();
         return str;
     }
 }
