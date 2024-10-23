@@ -75,14 +75,16 @@ public class Driver {
 
         int pick = -1;
 
+        //Switch statement for assigning menu buttons
         do {
             try {
+                System.out.println("# # # Video Game Management System # # #");
                 System.out.println("(1) Add a video game");
                 System.out.println("(2) Display Inventory");
                 System.out.println("(3) Search title");
                 System.out.println("(4) Search platform");
                 System.out.println("(5) Exit");
-                System.out.println("\nWhat's your pick?");
+                System.out.println("\nWhich menu function are we using? Enter a number: ");
                 pick = select.nextInt();
 
                 switch (pick) {
@@ -99,7 +101,7 @@ public class Driver {
                         searchByPlatform(theVideoGame);
                         break;
                     case 5:
-                        System.out.println("Exiting");
+                        System.out.println("Exiting..");
                         break;
                     default:
                         System.out.println("Invalid input");
@@ -108,13 +110,16 @@ public class Driver {
                 System.out.println("\nError: Please enter a valid number\n");
                 select.nextLine();
             }
+            //Exits program
         }while (pick != 5);
     }
 
+    //Add game prompt
     public static void addGame(ArrayList<VideoGame> addVideoGame) {
 
         Scanner scan = new Scanner(System.in);
 
+        //Variables
         String title;
         String genre;
         String platform;
@@ -132,44 +137,59 @@ public class Driver {
         addVideoGame.add(new VideoGame(title, genre, platform, price));
     }
 
+    //Displays the list of games added to the ArrayList
     public static void displayInventory(ArrayList<VideoGame> displayVideoGame) {
+        System.out.println("vvv List of Current Video Games vvv\n");
         for (VideoGame myVideoGame : displayVideoGame) {
             System.out.println(myVideoGame.printVideoGameInfo());
         }
+        System.out.println("^^^ End of List ^^^\n");
     }
+
+    //Search function by a game's title
     public static void searchByTitle(ArrayList<VideoGame> examineTitle) {
 
         Scanner hunt = new Scanner(System.in);
         String searchString;
+        boolean titleFound = false;
 
         System.out.println("Search by title: ");
         searchString = hunt.nextLine();
 
         for(VideoGame videoGame : examineTitle){
-            if(videoGame.getVideoGameTitle().toLowerCase().equals(searchString)){
-                System.out.println("\nFound it!\n");
+            if(videoGame.getVideoGameTitle().equals(searchString)){
+                System.out.println("\nFound it!!!\n");
                 System.out.println(videoGame.printVideoGameInfo());
-            } else {
-                System.out.println("\nDid not find it\n");
+                titleFound = true;
             }
         }
+        //Boolean feedback for not finding the title
+        if(!titleFound){
+            System.out.println("\n>>> Not found <<<\n");
+        }
+        System.out.println("^^^ End of Search ^^^");
     }
+    //Search function by platform function
         public static void searchByPlatform(ArrayList<VideoGame> examinePlatform) {
 
             Scanner hunt = new Scanner(System.in);
             String searchString;
-
+            boolean platformFound = false;
 
             System.out.println("Search by platform: ");
             searchString = hunt.nextLine();
 
             for(VideoGame videoGame : examinePlatform){
-                if(videoGame.getVideoGamePlatform().toLowerCase().equals(searchString)){
+                if(videoGame.getVideoGamePlatform().equals(searchString)){
                     System.out.println("\nPlatform found!\n");
                     System.out.println(videoGame.printVideoGameInfo());
-                } else {
-                    System.out.println("\nNot found\n");
+                    platformFound = true;
                 }
             }
+            //Boolean feedback for not finding the platform
+            if(!platformFound) {
+                System.out.println("\n>>> Not found <<<\n");
+            }
+            System.out.println("^^^ End of Search ^^^");
         }
 }
