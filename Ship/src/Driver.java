@@ -41,6 +41,7 @@ Program outputs
 Output the information of each of the Ships
  */
 
+import java.io.FileWriter;
 import java.util.Scanner;
 public class Driver {
     public static void main(String[] cheese) {
