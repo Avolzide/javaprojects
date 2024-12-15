@@ -61,10 +61,7 @@ class Nurse extends MedicalProvider{
 
     public Nurse(Nurse nurse){
 
-        super.firstName = nurse.firstName;
-        super.lastName = nurse.lastName;
-        super.employeeID = nurse.employeeID;
-        super.employeeOfficeLocation = new OfficeLocation(nurse.employeeOfficeLocation);
+        super(nurse);
         this.type = nurse.type;
         this.hourlyWage = nurse.hourlyWage;
         this.hoursWorked = nurse.hoursWorked;
@@ -127,6 +124,7 @@ class Nurse extends MedicalProvider{
         return normalPay;
     }
 
+    //Printout for hourly wage Nurse
     @Override
     public String toString() {
         return super.toString() +

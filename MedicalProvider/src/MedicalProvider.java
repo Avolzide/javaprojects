@@ -104,6 +104,7 @@ public abstract class MedicalProvider {
         this.employeeOfficeLocation = employeeOfficeLocation;
     }
 
+    //toString method for Medical Provider name, id, and office location
     public String toString(){
 
         return "\n" + getClass().getSimpleName() + " Name: " + getFirstName() + " " + getLastName() +

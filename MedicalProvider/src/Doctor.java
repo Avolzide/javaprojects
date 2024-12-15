@@ -65,7 +65,7 @@ class Doctor extends MedicalProvider {
     //Copy constructor
     public Doctor(Doctor doctor){
 
-        super(doctor.firstName, doctor.lastName, doctor.employeeID, doctor.employeeOfficeLocation);
+        super(doctor);
         this.specialty = doctor.specialty;
         this.licenseNumber = doctor.licenseNumber;
         this.yearlySalary = doctor.yearlySalary;
@@ -105,7 +105,7 @@ class Doctor extends MedicalProvider {
         return weeklyPay;
     }
 
-    //Print out parent toString and Doctor
+    //Print out annual salaried Doctor
     @Override
     public String toString() {
         return super.toString() +

@@ -54,6 +54,7 @@ public class Driver {
         medicalProviders.add(new Nurse("Marth", "Tia", "j2934718", officeLocation1, "RN", 25.0, 45));
         medicalProviders.add(new Nurse("Thancred", "Waters", "s8273645", officeLocation2, "LVN", 30.0, 40));
 
+
         //For each list
         for(MedicalProvider medicalProvider: medicalProviders){
 
